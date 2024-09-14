@@ -24,13 +24,13 @@ public class UIManager : Singleton<UIManager>
     // 이벤트 리스너 등록
     private void AddEvents()
     {
-        EventManager<StageEvent>.StartListening(StageEvent.EnterStage, EnterStage);
+        
     }
     
     // 이벤트 리스너 제거
     private void RemoveEvents()
     {
-        EventManager<StageEvent>.StopListening(StageEvent.EnterStage, EnterStage);
+        
     }
 
     // 스테이지 입장 시 메인 메뉴, 플레이어 재화 UI 비활성화
