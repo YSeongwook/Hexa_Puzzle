@@ -7,9 +7,10 @@ namespace EnumTypes
       
     }
 
-    public enum Temp
+    public enum GemEvents
     {
-        PopUp
+        MoveGem,
+        GemLanded,
     }
 
     public enum DataEvents
