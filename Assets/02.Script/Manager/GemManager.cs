@@ -1,4 +1,5 @@
 using System.Collections;
+using EnumTypes;
 using UnityEngine;
 
 public class GemManager : MonoBehaviour
@@ -17,9 +18,16 @@ public class GemManager : MonoBehaviour
     private IEnumerator SpawnGem()
     {
         int centerCol = maxCols / 2;
+
+        // 랜덤 보석 타입 선택
+        GemType randomGemType = (GemType)Random.Range(0, 5);
+
+        // 보석 생성 및 초기화
         GameObject gemObject = Instantiate(gemPrefab, new Vector2(centerCol, maxRows + 1), Quaternion.identity);
         Gem gem = gemObject.GetComponent<Gem>();
+        gem.Init(randomGemType); // 보석 타입에 맞게 초기화
 
+        // 기존 이동 로직
         while (true)
         {
             int row = GetCurrentRow(gem.transform.position.y);
@@ -42,7 +50,7 @@ public class GemManager : MonoBehaviour
                 break;
             }
 
-            yield return null;  // 한 프레임 대기
+            yield return null; // 한 프레임 대기
         }
     }
 

@@ -90,3 +90,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dropSpeed: 5
+  gemType: 0
+  gemSprites:
+  - {fileID: 21300000, guid: d618654acd047c747a5483a88d955140, type: 3}
+  - {fileID: 21300000, guid: 98569438b125b374199c68148468d7bc, type: 3}
+  - {fileID: 21300000, guid: 89499b1264705864faf34ce7e96f9f51, type: 3}
+  - {fileID: 21300000, guid: 5132a0e0e301dd449b1dfc15417e0f79, type: 3}
+  - {fileID: 21300000, guid: 5af6397132ee19f4d85c5498e0992e4e, type: 3}

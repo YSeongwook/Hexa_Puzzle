@@ -2,6 +2,15 @@ using UnityEngine;
 
 namespace EnumTypes
 {
+    public enum GemType
+    {
+        Blue,
+        Green,
+        Purple,
+        Yellow,
+        White
+    }
+    
     public enum UIEvents
     {
       

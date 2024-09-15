@@ -6,8 +6,23 @@ using UnityEngine;
 public class Gem : MonoBehaviour
 {
     public float dropSpeed = 5f;
-    private Vector2 _targetPosition;
+    public GemType gemType; // 보석의 종류
+    public Sprite[] gemSprites; // 보석 스프라이트 배열 (5개)
 
+    private Vector2 _targetPosition;
+    private SpriteRenderer _spriteRenderer;
+
+    private void Awake()
+    {
+        _spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+
+    public void Init(GemType type)
+    {
+        gemType = type;
+        _spriteRenderer.sprite = gemSprites[(int)gemType]; // 보석 타입에 맞는 스프라이트 설정
+    }
+    
     private void OnEnable()
     {
         EventManager<GemEvents>.StartListening(GemEvents.MoveGem, OnMoveGem);
